@@ -21,7 +21,7 @@ public class TaskManager {
     public boolean update(int id, String newTitle, Boolean done) {
         Optional<Task> found = tasks.stream()
                 .filter(t -> t.id == id).findFirst();
-        fount.ifPresent(t -> {
+        found.ifPresent(t -> {
             if (newTitle != null) t.title = newTitle;
             if (done != null) t.done = done;
         });
