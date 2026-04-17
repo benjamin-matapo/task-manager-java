@@ -47,7 +47,7 @@ public class App {
 
                 case "5":
                     System.out.println("Peace.");
-                    break;
+                    return;
 
                 default:
                     System.out.println("Invalid choice.");
