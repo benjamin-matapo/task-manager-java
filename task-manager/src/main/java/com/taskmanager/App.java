@@ -1,6 +1,7 @@
 package com.taskmanager;
 
 import java.util.Scanner;
+import java.util.List;
 
 public class App {
     public static void main(String[] args) {
@@ -20,7 +21,7 @@ public class App {
 
             switch (choice) {
                 case "1":
-                    var tasks = manager.readAll();
+                    List<Task> tasks = manager.readAll();
                     if (tasks.isEmpty()) System.out.println("No tasks yet.");
                     else tasks.forEach(System.out::println);
                     break;
@@ -35,7 +36,7 @@ public class App {
                     System.out.print("Task ID: ");
                     int updateId = Integer.parseInt(scanner.nextLine());
                     boolean updated = manager.update(updateId, null, true);
-                    System.out.println(updated ? "Mark done." : "Not found.");
+                    System.out.println(updated ? "Marked done." : "Not found.");
                     break;
 
                 case "4":
